@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="41 formatos de criativo para Reels, TikTok e anuncios, filtrados por esforco de producao e estagio de funil, com briefing pronto para copiar.">
+<title>Ferramentas de Formatos</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,700&family=Mona+Sans:wght@500;600&display=swap">
+<style>
+/* Design system Framer: canvas quase preto, display com tracking negativo, pilulas brancas, gradiente so como pontuacao. */
+:root{
+  --primary:#ffffff; --on-primary:#000000;
+  --accent:#0099ff;
+  --ink:#ffffff; --ink-muted:#999999;
+  --canvas:#090909; --surface-1:#141414; --surface-2:#1c1c1c;
+  --hairline:#262626; --hairline-soft:#1a1a1a;
+  --g-violet:#6a4cf5; --g-magenta:#d44df0; --g-orange:#ff7a3d; --g-coral:#ff5577;
+  --success:#22c55e;
+  --display:"Mona Sans","Inter",system-ui,sans-serif;
+  --body:"Inter",system-ui,-apple-system,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  background:var(--canvas); color:var(--ink);
+  font-family:var(--body); font-size:15px; line-height:1.3; letter-spacing:-.15px;
+  font-feature-settings:"cv01","cv05","cv09","cv11","ss03";
+  padding-inline:20px; padding-block:0 96px;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%}
+[hidden]{display:none!important}
+.wrap{max-width:1040px;margin-inline:auto}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:rgba(9,9,9,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--hairline-soft);margin-inline:-20px;padding:0 20px}
+.nav-in{max-width:1040px;margin-inline:auto;height:56px;display:flex;align-items:center;gap:12px}
+.mark{font-family:var(--display);font-weight:600;font-size:15px;letter-spacing:-.5px;margin-right:auto}
+.mark span{color:var(--ink-muted)}
+
+/* hero */
+.hero{padding-block:72px 44px;max-width:19ch}
+h1{font-family:var(--display);font-weight:600;font-size:clamp(44px,9vw,85px);line-height:.95;letter-spacing:-.05em;margin:0;text-wrap:balance}
+.lead{color:var(--ink-muted);font-size:18px;line-height:1.3;letter-spacing:-.18px;margin:20px 0 0;max-width:46ch}
+
+/* barra de controles */
+.controls{position:sticky;top:calc(56px + env(safe-area-inset-top,0px));z-index:30;background:rgba(9,9,9,.92);backdrop-filter:blur(12px);padding-block:14px;margin-inline:-20px;padding-inline:20px;border-bottom:1px solid var(--hairline-soft)}
+.controls-in{max-width:1040px;margin-inline:auto;display:flex;flex-direction:column;gap:12px}
+.row1{display:flex;gap:10px;flex-wrap:wrap}
+input[type=search]{flex:1;min-width:180px;background:var(--surface-1);color:var(--ink);border:1px solid transparent;border-radius:10px;padding:10px 14px;font:inherit;font-size:15px}
+input[type=search]::placeholder{color:var(--ink-muted)}
+input[type=search]:focus{outline:none;border-color:var(--hairline);box-shadow:0 0 0 3px rgba(0,153,255,.15)}
+.pill{font-size:14px;font-weight:500;letter-spacing:-.14px;border-radius:100px;padding:10px 15px;border:0;cursor:pointer;font-family:inherit;min-height:40px}
+.pill-primary{background:var(--primary);color:var(--on-primary)}
+.pill-primary:active{transform:scale(.97)}
+.filters{display:flex;gap:7px;flex-wrap:wrap;align-items:center}
+.flabel{font-size:13px;font-weight:500;color:var(--ink-muted);letter-spacing:-.13px;margin-right:2px}
+.tab{background:var(--canvas);color:var(--ink-muted);border:1px solid var(--hairline);border-radius:100px;padding:8px 14px;font:inherit;font-size:14px;font-weight:500;cursor:pointer;min-height:40px}
+.tab[aria-pressed="true"]{background:var(--surface-2);color:var(--ink);border-color:transparent}
+.tab:focus-visible,.pill:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.count{font-size:13px;color:var(--ink-muted);letter-spacing:-.13px}
+.count b{color:var(--ink);font-weight:500;font-variant-numeric:tabular-nums}
+.limpar{background:none;border:0;color:var(--accent);font:inherit;font-size:13px;cursor:pointer;padding:4px}
+
+/* destaque metodo */
+.metodo{background:var(--g-violet);border-radius:30px;padding:32px;margin-block:40px}
+.metodo h2{font-family:var(--display);font-weight:600;font-size:32px;line-height:1.13;letter-spacing:-1px;margin:0 0 14px}
+.metodo ol{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:9px;font-size:16px;line-height:1.35}
+.metodo b{font-weight:600}
+
+/* familias */
+.fam{padding-block:40px 0}
+.fam-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--hairline-soft);padding-bottom:12px;margin-bottom:20px}
+.fam-head h2{font-family:var(--display);font-weight:600;font-size:32px;line-height:1.13;letter-spacing:-1px;margin:0}
+.fam-head p{margin:0;color:var(--ink-muted);font-size:14px;flex:1;min-width:200px}
+.n{font-size:13px;color:var(--ink-muted);font-variant-numeric:tabular-nums}
+.grid{display:flex;flex-direction:column;gap:15px}
+
+/* card */
+.card{background:var(--surface-1);border-radius:20px;overflow:hidden;display:grid;grid-template-columns:190px 1fr;scroll-margin-top:140px}
+.card.alvo{box-shadow:0 0 0 1px rgba(0,153,255,.5)}
+.card.feito{opacity:.52}
+.shot{background:#0d0d0d;min-width:0;display:flex;align-items:flex-start;justify-content:center}
+.shot img{display:block;width:100%;height:auto}
+.noimg{font-size:13px;color:var(--ink-muted);padding:28px 10px;text-align:center}
+.body{padding:20px;min-width:0;display:flex;flex-direction:column;gap:11px}
+.card-top{display:flex;gap:10px;align-items:flex-start}
+.body h3{font-family:var(--display);font-weight:600;font-size:22px;line-height:1.2;letter-spacing:-.8px;margin:0;flex:1}
+.usado{background:var(--surface-2);color:var(--ink-muted);border:0;border-radius:100px;padding:7px 12px;font:inherit;font-size:12px;cursor:pointer;white-space:nowrap}
+.usado[aria-pressed="true"]{background:rgba(34,197,94,.16);color:var(--success)}
+.oque{margin:0;color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:12px;font-weight:500;letter-spacing:-.12px;color:var(--ink-muted);background:var(--surface-2);border-radius:6px;padding:5px 9px}
+.chip-funil{color:var(--ink)}
+.chip-baixo{color:var(--success)}
+.chip-alto{color:var(--g-orange)}
+dl{margin:0;border-top:1px solid var(--hairline);padding-top:12px;display:flex;flex-direction:column;gap:9px}
+dt{font-size:12px;font-weight:500;color:var(--ink-muted);letter-spacing:-.12px}
+dd{margin:0;font-size:14px;line-height:1.4;overflow-wrap:anywhere}
+.acoes{display:flex;gap:8px;flex-wrap:wrap;margin-top:2px}
+.btn-brief,.btn-link{background:var(--surface-2);color:var(--ink);border:0;border-radius:30px;padding:8px 14px;font:inherit;font-size:14px;font-weight:500;cursor:pointer;min-height:40px}
+.btn-brief:active,.btn-link:active{transform:scale(.97)}
+
+@media (max-width:720px){
+  .card{grid-template-columns:1fr}
+  .shot{max-height:300px;overflow:hidden;border-bottom:1px solid var(--hairline)}
+  .shot img{width:auto;max-height:300px}
+  .metodo{padding:24px;border-radius:20px}
+  .metodo h2{font-size:26px}
+}
+
+.vazio{display:none;color:var(--ink-muted);padding:40px 0;text-align:center}
+.rodape{border-top:1px solid var(--hairline-soft);margin-top:56px;padding-top:32px;color:var(--ink-muted);font-size:13px;display:flex;flex-direction:column;gap:9px}
+.rodape b{color:var(--ink);font-weight:500}
+.rodape a{color:var(--accent)}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(24px + env(safe-area-inset-bottom,0px));background:var(--primary);color:var(--on-primary);border-radius:100px;padding:11px 18px;font-size:14px;font-weight:500;z-index:60;opacity:0;pointer-events:none;transition:opacity .18s}
+.toast.on{opacity:1}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<nav class="nav"><div class="nav-in">
+  <div class="mark">Ferramentas de Formatos <span>· 41</span></div>
+  <button class="pill pill-primary" id="sortear" type="button">Sortear formato</button>
+</div></nav>
+
+<div class="wrap">
+  <header class="hero">
+    <h1>Nunca mais sem ideia de criativo.</h1>
+    <p class="lead">41 formatos com direção de gravação, estrutura de roteiro e o erro que estraga a peça. Filtre pelo que dá para gravar hoje e leve o briefing pronto.</p>
+  </header>
+</div>
+
+<div class="controls"><div class="controls-in">
+  <div class="row1">
+    <input type="search" id="q" placeholder="Buscar formato, técnica ou situação…" aria-label="Buscar formato">
+  </div>
+  <div class="filters" id="f-funil">
+    <span class="flabel">Funil</span>
+    <button class="tab" type="button" data-k="funil" data-v="topo" aria-pressed="false">Topo</button>
+    <button class="tab" type="button" data-k="funil" data-v="meio" aria-pressed="false">Meio</button>
+    <button class="tab" type="button" data-k="funil" data-v="fundo" aria-pressed="false">Fundo</button>
+  </div>
+  <div class="filters" id="f-prod">
+    <span class="flabel">Produção</span>
+    <button class="tab" type="button" data-k="esforco" data-v="baixo" aria-pressed="false">Esforço baixo</button>
+    <button class="tab" type="button" data-k="camera" data-v="nao" aria-pressed="false">Sem aparecer</button>
+    <button class="tab" type="button" data-k="dupla" data-v="nao" aria-pressed="false">Sozinha</button>
+    <button class="tab" type="button" data-k="inedito" data-v="1" aria-pressed="false">Ainda não usei</button>
+  </div>
+  <div class="filters">
+    <span class="count"><b id="n">41</b> formatos</span>
+    <button class="limpar" id="limpar" type="button">Limpar filtros</button>
+  </div>
+</div></div>
+
+<div class="wrap">
+
+  <section class="metodo">
+    <h2>O método, em quatro passos</h2>
+    <ol>
+      <li><b>Defina a função, não o formato.</b> A peça é para quem não sabe que tem o problema, para quem compara, ou para quem já quer resolver?</li>
+      <li><b>Filtre pelo que dá para gravar hoje.</b> Esforço e equipe disponível eliminam metade do catálogo antes de você escolher.</li>
+      <li><b>Pegue dois ou três formatos, nunca um.</b> Variação de formato é o que gera teste real, no leilão e no orgânico.</li>
+      <li><b>Marque o que já usou.</b> Bloqueio criativo quase sempre é esquecimento, não falta de ideia.</li>
+    </ol>
+  </section>
+
+<!--SECOES-->
+
+  <p class="vazio" id="vazio">Nenhum formato com esses filtros. Tente limpar algum.</p>
+
+  <footer class="rodape">
+    <p><b>Uso das imagens.</b> Os exemplos são recortes de peças de criadores terceiros e servem como referência interna para reconhecer o formato. Não republique.</p>
+    <p><b>O que fica neste navegador.</b> A marcação de "já usei" é salva só no seu aparelho. Ninguém mais vê, e ela não acompanha você em outro dispositivo.</p>
+    <p>Falta a ficha de "Horizontal com edição cinemática", que está no quadro de origem mas ficou sem exemplo.</p>
+  </footer>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  var DADOS = /*DADOS*/;
+  var CHAVE = "ff.usados.v1";
+  var cards = [].slice.call(document.querySelectorAll(".card"));
+  var tabs  = [].slice.call(document.querySelectorAll(".tab"));
+  var q = document.getElementById("q");
+  var nEl = document.getElementById("n");
+  var vazio = document.getElementById("vazio");
+  var toastEl = document.getElementById("toast");
+  var filtros = {funil:null, esforco:null, camera:null, dupla:null, inedito:null};
+
+  function lerUsados(){
+    try { return JSON.parse(localStorage.getItem(CHAVE)) || {}; } catch(e){ return {}; }
+  }
+  function salvarUsados(o){
+    try { localStorage.setItem(CHAVE, JSON.stringify(o)); } catch(e){}
+  }
+  var usados = lerUsados();
+
+  function toast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add("on");
+    clearTimeout(toast._t);
+    toast._t = setTimeout(function(){ toastEl.classList.remove("on"); }, 1900);
+  }
+
+  function pintaUsados(){
+    cards.forEach(function(c){
+      var on = !!usados[c.dataset.slug];
+      c.classList.toggle("feito", on);
+      var b = c.querySelector(".usado");
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+      b.textContent = on ? "Já usei" : "Marcar como usado";
+    });
+  }
+
+  function visivel(c){
+    var termo = (q.value||"").trim().toLowerCase();
+    if (termo && c.dataset.busca.indexOf(termo) === -1) return false;
+    if (filtros.funil && c.dataset.funil.indexOf(filtros.funil) === -1) return false;
+    if (filtros.esforco && c.dataset.esforco !== filtros.esforco) return false;
+    if (filtros.camera && c.dataset.camera !== "nao") return false;
+    if (filtros.dupla && c.dataset.dupla !== "nao") return false;
+    if (filtros.inedito && usados[c.dataset.slug]) return false;
+    return true;
+  }
+
+  function aplicar(){
+    var n = 0;
+    cards.forEach(function(c){
+      var v = visivel(c);
+      c.hidden = !v;
+      if (v) n++;
+    });
+    document.querySelectorAll(".fam").forEach(function(s){
+      s.hidden = !s.querySelector(".card:not([hidden])");
+    });
+    nEl.textContent = n;
+    vazio.style.display = n ? "none" : "block";
+  }
+
+  q.addEventListener("input", aplicar);
+
+  tabs.forEach(function(t){
+    t.addEventListener("click", function(){
+      var k = t.dataset.k, v = t.dataset.v;
+      filtros[k] = (filtros[k] === v) ? null : v;
+      tabs.forEach(function(o){
+        if (o.dataset.k === k) o.setAttribute("aria-pressed", filtros[k] === o.dataset.v ? "true" : "false");
+      });
+      aplicar();
+    });
+  });
+
+  document.getElementById("limpar").addEventListener("click", function(){
+    q.value = "";
+    Object.keys(filtros).forEach(function(k){ filtros[k] = null; });
+    tabs.forEach(function(o){ o.setAttribute("aria-pressed","false"); });
+    aplicar();
+  });
+
+  document.addEventListener("click", function(e){
+    var b = e.target.closest ? e.target.closest("button") : null;
+    if (!b) return;
+
+    if (b.classList.contains("usado")) {
+      var s = b.dataset.slug;
+      if (usados[s]) { delete usados[s]; } else { usados[s] = Date.now(); }
+      salvarUsados(usados);
+      pintaUsados();
+      aplicar();
+      return;
+    }
+
+    if (b.classList.contains("btn-brief")) {
+      var d = DADOS[b.dataset.slug];
+      var txt = [
+        "FORMATO: " + d.nome + " (" + d.funil + ")",
+        d.oque,
+        "",
+        "ROTEIRO",
+        "0-3s   TELA:            | FALA:            | TEXTO:",
+        "3-15s  TELA:            | FALA:            | TEXTO:",
+        "15s+   TELA:            | FALA:            | TEXTO:",
+        "Estrutura: " + d.roteiro,
+        "",
+        "GRAVAÇÃO",
+        d.gravar,
+        "",
+        "CUIDADO",
+        d.erro,
+        "",
+        "LEGENDA",
+        "(primeira linha = segundo gancho)",
+        "",
+        "CHAMADA",
+        "(uma só, coerente com o funil)",
+        "",
+        "FALTA DE VOCÊ",
+        "[INSERIR: números, casos, oferta, prazo]"
+      ].join("\n");
+      copiar(txt, "Briefing copiado");
+      return;
+    }
+
+    if (b.classList.contains("btn-link")) {
+      copiar(location.origin + location.pathname + "#" + b.dataset.slug, "Link copiado");
+      return;
+    }
+  });
+
+  function copiar(txt, msg){
+    var ok = function(){ toast(msg); };
+    var falhou = function(){
+      var ta = document.createElement("textarea");
+      ta.value = txt; ta.style.position = "fixed"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand("copy"); toast(msg); }
+      catch(e2){ toast("Não consegui copiar aqui"); }
+      document.body.removeChild(ta);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(txt).then(ok).catch(falhou);
+    } else { falhou(); }
+  }
+
+  document.getElementById("sortear").addEventListener("click", function(){
+    var pool = cards.filter(function(c){ return visivel(c) && !usados[c.dataset.slug]; });
+    if (!pool.length) pool = cards.filter(visivel);
+    if (!pool.length) { toast("Sem formato nos filtros atuais"); return; }
+    var alvo = pool[Math.floor(Math.random()*pool.length)];
+    cards.forEach(function(c){ c.classList.remove("alvo"); });
+    alvo.classList.add("alvo");
+    alvo.scrollIntoView({behavior:"smooth", block:"center"});
+    toast("Sorteado: " + alvo.querySelector("h3").textContent);
+  });
+
+  if (location.hash) {
+    var alvo = document.getElementById(location.hash.slice(1));
+    if (alvo && alvo.classList.contains("card")) {
+      alvo.classList.add("alvo");
+      setTimeout(function(){ alvo.scrollIntoView({block:"center"}); }, 60);
+    }
+  }
+
+  pintaUsados();
+  aplicar();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Catalogo de 41 formatos de criativo para Reels, TikTok e anuncios de video, com direcao de gravacao e estrutura de roteiro.">
+<title>Formatos de Criativo</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Public+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: famílias empilhadas; dentro de cada uma, grade de fichas com print à esquerda e descrição à direita. */
+:root{
+  --bg:#f4f5f2; --surface:#fff; --fg:#1b1f1d; --muted:#5f6763; --line:#dcdfd9;
+  --accent:#1f6f5c; --accent-soft:#e3efea; --shot-bg:#eceeea;
+  --display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --body:"Public Sans",system-ui,-apple-system,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#15181a; --surface:#1e2325; --fg:#e9ece9; --muted:#9aa49f; --line:#2e3538;
+  --accent:#5fc3a6; --accent-soft:#1d322c; --shot-bg:#171b1d; color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --bg:#15181a; --surface:#1e2325; --fg:#e9ece9; --muted:#9aa49f; --line:#2e3538;
+  --accent:#5fc3a6; --accent-soft:#1d322c; --shot-bg:#171b1d; color-scheme:dark;}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);line-height:1.55;padding-inline:20px;padding-block:40px 72px}
+.wrap{max-width:900px;margin-inline:auto;display:flex;flex-direction:column;gap:40px}
+.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,5.5vw,2.8rem);line-height:1.08;margin:.3rem 0 0;letter-spacing:-.015em;text-wrap:balance}
+.sub{color:var(--muted);margin:.75rem 0 0;max-width:62ch}
+.busca{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+input[type=search]{font-family:var(--body);font-size:.95rem;padding:10px 13px;border:1px solid var(--line);border-radius:5px;background:var(--surface);color:var(--fg);min-width:220px;flex:1}
+input[type=search]:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.filtros{display:flex;flex-wrap:wrap;gap:7px}
+.fbtn{font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;background:none;color:var(--muted);border:1px solid var(--line);border-radius:3px;padding:8px 11px;cursor:pointer}
+.fbtn[aria-pressed="true"]{background:var(--accent-soft);color:var(--accent);border-color:color-mix(in srgb,var(--accent) 40%,transparent)}
+.fbtn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.fam-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.fam-head h2{font-family:var(--display);font-size:1.3rem;margin:0;letter-spacing:-.01em}
+.fam-head p{margin:0;color:var(--muted);font-size:.88rem;flex:1;min-width:200px}
+.count{font-family:var(--mono);font-size:.72rem;color:var(--muted)}
+.grid{display:flex;flex-direction:column;gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;display:grid;grid-template-columns:200px 1fr;overflow:hidden}
+.shot{background:var(--shot-bg);display:flex;align-items:flex-start;justify-content:center;border-right:1px solid var(--line);min-width:0}
+.shot img{display:block;width:100%;height:auto;max-width:100%}
+.semimg{font-family:var(--mono);font-size:.74rem;color:var(--muted);padding:28px 10px;text-align:center}
+.body{padding:18px 20px;min-width:0;display:flex;flex-direction:column;gap:9px}
+.body h3{font-family:var(--display);font-weight:700;font-size:1.15rem;margin:0;letter-spacing:-.01em}
+.funil{align-self:flex-start;font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;background:var(--accent-soft);color:var(--accent);border-radius:3px;padding:4px 8px}
+.oque{margin:0;font-size:.95rem}
+dl{margin:0;display:flex;flex-direction:column;gap:7px;border-top:1px solid var(--line);padding-top:11px}
+dt{font-family:var(--mono);font-size:.66rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+dd{margin:0 0 2px;font-size:.88rem;overflow-wrap:anywhere}
+@media (max-width:620px){
+  .card{grid-template-columns:1fr}
+  .shot{border-right:none;border-bottom:1px solid var(--line);max-height:340px;overflow:hidden}
+  .shot img{width:auto;max-height:340px}
+}
+.vazio{display:none;color:var(--muted);font-family:var(--mono);font-size:.85rem;padding:22px 0}
+.nota{border-top:1px solid var(--line);padding-top:22px;font-size:.86rem;color:var(--muted);display:flex;flex-direction:column;gap:9px}
+.nota b{color:var(--fg)}
+
+html,body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <p class="eyebrow">Referência interna · 41 formatos</p>
+    <h1>Formatos de Criativo</h1>
+    <p class="sub">O que cada nome quer dizer, como gravar, como estruturar o roteiro e o erro que estraga a peça. O print ao lado de cada ficha é só exemplo visual do formato; o nicho não importa.</p>
+    <div class="busca">
+      <input type="search" id="q" placeholder="Buscar formato…" aria-label="Buscar formato">
+      <div class="filtros" id="filtros">
+        <button class="fbtn" type="button" data-f="topo" aria-pressed="false">Topo</button>
+        <button class="fbtn" type="button" data-f="meio" aria-pressed="false">Meio</button>
+        <button class="fbtn" type="button" data-f="fundo" aria-pressed="false">Fundo</button>
+      </div>
+    </div>
+  </header>
+
+<section class="fam" id="fam-apresentador">
+<div class="fam-head"><h2>Apresentador</h2><p>O rosto carrega a peça. Barato de produzir, depende da fala.</p><span class="count">7</span></div>
+<div class="grid">
+<article class="card" data-nome="tablet na mão" data-funil="meio" data-fam="apresentador">
+<div class="shot"><img src="formatos-criativos/assets/cards/tablet-na-mao.jpg" alt="Referência do formato Tablet na mão" width="344" height="711" loading="lazy"></div>
+<div class="body">
+<h3>Tablet na mão</h3>
+<span class="funil">Meio</span>
+<p class="oque">Apresentador segura tablet ou caderno e aponta para o conteúdo enquanto fala.</p>
+<dl>
+<dt>Como gravar</dt><dd>Tablet na altura do peito, inclinado para não refletir luz. O dedo apontando guia o olhar.</dd>
+<dt>Roteiro</dt><dd>Promessa específica no gancho → percorre o conteúdo item a item → fecha na ação.</dd>
+<dt>Erro comum</dt><dd>Tela do tablet ilegível no celular. Poucas palavras por linha.</dd>
+</dl>
+</div></article>
+<article class="card" data-nome="quadro branco" data-funil="meio" data-fam="apresentador">
+<div class="shot"><img src="formatos-criativos/assets/cards/quadro-branco.jpg" alt="Referência do formato Quadro branco" width="462" height="931" loading="lazy"></div>
+<div class="body">
+<h3>Quadro branco</h3>
+<span class="funil">Meio</span>
+<p class="oque">Apresentador desenha ou escreve enquanto explica, com o quadro visível.</p>
+<dl>
+<dt>Como gravar</dt><dd>Enquadramento aberto, pegando mão e superfície. O desenho nasce durante o vídeo.</dd>
+<dt>Roteiro</dt><dd>Pergunta ou problema → construção visual passo a passo → conclusão com o desenho completo.</dd>
+<dt>Erro comum</dt><dd>Escrever rápido ou ilegível demais para a tela do celular.</dd>
+</dl>
+</div></article>
+<article class="card" data-nome="caixinha" data-funil="meio" data-fam="apresentador">
+<div class="shot"><img src="formatos-criativos/assets/cards/caixinha.jpg" alt="Referência do formato Caixinha" width="417" height="922" loading="lazy"></div>
+<div class="body">
+<h3>Caixinha</h3>
+<span class="funil">Meio</span>
+<p class="oque">Resposta a uma pergunta da caixinha do Instagram, com o print sobreposto.</p>
+<dl>
+<dt>Como gravar</dt><dd>Print real da caixinha no topo, pessoa respondendo abaixo.</dd>
+<dt>Roteiro</dt><dd>Lê a pergunta em voz alta → responde direto → amplia para quem não perguntou.</dd>
+<dt>Erro comum</dt><dd>Inventar a pergunta. O público reconhece e a prova social evapora.</dd>
+</dl>
+</div></article>
+<article class="card" data-nome="talking head" data-funil="meio e fundo" data-fam="apresentador">
+<div class="shot"><img src="formatos-criativos/assets/cards/talking-head.jpg" alt="Referência do formato Talking head" width="461" height="900" loading="lazy"></div>
+<div class="body">
+<h3>Talking head</h3>
+<span class="funil">Meio e fundo</span>
+<p class="oque">Pessoa falando direto para a câmera, sem recurso visual além da legenda.</p>
+<dl>
+<dt>Como gravar</dt><dd>Câmera na altura dos olhos, a um braço de distância, luz de frente. Legenda queimada.</dd>
+<dt>Roteiro</dt><dd>Gancho na primeira frase, antes de qualquer apresentação → uma ideia só → ação.</dd>
+<dt>Erro comum</dt><dd>Começar com oi, tudo bem, hoje eu vou falar sobre. Três segundos gastos sem entregar nada.</dd>
+</dl>
+</div></article>
+<article class="card" data-nome="narrado" data-funil="topo e meio" data-fam="apresentador">
+<div class="shot"><img src="formatos-criativos/assets/cards/narrado.jpg" alt="Referência do formato Narrado" width="216" height="456" loading="lazy"></div>
+<div class="body">
+<h3>Narrado</h3>
+<span class="funil">Topo e meio</span>
+<p class="oque">Imagens do ambiente ou do processo com narração em voz off. Nenhum rosto falando.</p>
+<dl>
+<dt>Como gravar</dt><dd>Grave a narração separada das imagens. Imagens com movimento lento e contínuo.</dd>
+<dt>Roteiro</dt><dd>Narração escrita antes → a imagem ilustra o que a voz diz, nunca o contrário → ação.</dd>
+<dt>Erro comum</dt><dd>Narração genérica que serviria para qualquer empresa do setor.</dd>
+</dl>
+</div></article>
+<article class="card" data-nome="selfie in mirror" data-funil="topo e meio" data-fam="apresentador">
+<div class="shot"><img src="formatos-criativos/assets/cards/selfie-in-mirror.jpg" alt="Referência do formato Selfie in mirror" width="254" height="457" loading="lazy"></div>
+<div class="body">
+<h3>Selfie in mirror</h3>
+<span class="funil">Topo e meio</span>
+<p class="oque">Gravação no espelho, celular visível na mão, mostrando roupa, produto ou rotina.</p>
+<dl>
+<dt>Como gravar</dt><dd>Espelho limpo, corpo inteiro ou três quartos. O aspecto caseiro é a intenção.</dd>
+<dt>Roteiro</dt><dd>Mostra primeiro, explica depois → detalhe prático → ação.</dd>
+<dt>Erro comum</dt><dd>Produção boa demais. Luz de estúdio no espelho quebra o formato.</dd>
+</dl>
+</div></article>
+<article class="card" data-nome="podcast" data-funil="topo e meio" data-fam="apresentador">
+<div class="shot"><img src="formatos-criativos/assets/cards/podcast.jpg" alt="Referência do formato Podcast" width="208" height="456" loading="lazy"></div>
+<div class="body">
+<h3>Podcast</h3>
+<span class="funil">Topo e meio</span>
+<p class="oque">Corte com estética de podcast: microfone no enquadramento, conversa em vez de apresentação.</p>
+<dl>
+<dt>Como gravar</dt><dd>Microfone visível, enquadramento mais aberto que talking head, câmera parada.</dd>
+<dt>Roteiro</dt><dd>Entra no meio da frase → desenvolve um ponto contraintuitivo → corta antes de concluir.</dd>
+<dt>Erro comum</dt><dd>Cortar num ponto onde a fala perde sentido fora do contexto.</dd>
+</dl>
+</div></article>
+</div></section>
+<section class="fam" id="fam-comparação">
+<div class="fam-head"><h2>Comparação</h2><p>Coloca duas ou mais coisas lado a lado. O cérebro decide mais rápido comparando.</p><span class="count">7</span></div>
+<div class="grid">
+<article class="card" data-nome="mitos e verdades" data-funil="topo e meio" data-fam="comparação">
+<div class="shot"><img src="formatos-criativos/assets/cards/mitos-e-verdades.jpg" alt="Referência do formato Mitos e verdades" width="477" height="1021" loading="lazy"></div>
+<div class="body">
+<h3>Mitos e verdades</h3>
+<span class="funil">Topo e meio</span>
+<p class="oque">Afirmação na tela; o apresentador marca como mito ou verdade e explica.</p>
+<dl>
+<dt>Como gravar</dt><dd>Afirmação em texto no topo, marcadores de mito e verdade visíveis, gesto físico indicando a escolha.</dd>
+<dt>Roteiro</dt><dd>Afirmação polêmica → pausa curta para o espectador decidir → veredito → explicação em uma frase.</dd>
+<dt>Erro comum</dt><dd>Escolher um mito em que ninguém acredita. Precisa ser crença real do público.</dd>
+</dl>
+</div></article>
+<article class="card" data-nome="a + b + c" data-funil="topo" data-fam="comparação">
+<div class="shot"><img src="formatos-criativos/assets/cards/a-b-c.jpg" alt="Referência do formato A + B + C" width="220" height="448" loading="lazy"></div>
+<div class="body">
+<h3>A + B + C</h3>
+<span class="funil">Topo</span>
+<p class="oque">Combinação de elementos que isolados parecem banais e juntos entregam um resultado.</p>
+<dl>
+<dt>Como gravar</dt><dd>Cada elemento entra na tela de forma separada e acumulativa, até os três aparecerem juntos.</dd>
+<dt>Roteiro</dt><dd>Elemento A → B → C → o resultado da soma, que é o gancho real.</dd>
+<dt>Erro comum</dt><dd>Revelar o resultado antes da soma. O formato vive da curiosidade acumulada.</dd>
+</dl>
+</div></article>
+<article class="card" data-nome="péssimo x bom x excelente" data-funil="meio" data-fam="comparação">
+<div class="shot"><img src="formatos-criativos/assets/cards/pessimo-bom-excelente.jpg" alt="Referência do formato Péssimo x bom x excelente" width="292" height="450" loading="lazy"></div>
+<div class="body">
+<h3>Péssimo x bom x excelente</h3>
+<span class="funil">Meio</span>
+<p class="oque">Três níveis da mesma coisa em escala crescente, com marcação de cor.</p>
+<dl>
+<dt>Como gravar</dt><dd>Os três níveis na mesma tela ou em sequência rápida, com rótulo fixo e cor consistente.</dd>
+<dt>Roteiro</dt><dd>Mostra o péssimo e por que falha → o bom e o que falta → o excelente como padrão.</dd>
+<dt>Erro comum</dt><dd>A diferença entre bom e excelente não ficar visível.</dd>
+</dl>
+</div></article>
+<article class="card" data-nome="antes e depois" data-funil="meio e fundo" data-fam="comparação">
+<div class="shot"><img src="formatos-criativos/assets/cards/antes-e-depois.jpg" alt="Referência do formato Antes e depois" width="245" height="450" loading="lazy"></div>
+<div class="body">
+<h3>Antes e depois</h3>
+<span class="funil">Meio e fundo</span>
+<p class="oque">O estado inicial e o final da mesma situação, pessoa ou ambiente.</p>
+<dl>
+<dt>Como gravar</dt><dd>Mesmo enquadramento, luz e ângulo nas duas pontas. A diferença vem do resultado, não da produção.</dd>
+<dt>Roteiro</dt><dd>Mostra o antes sem adornar → corte seco → depois → nomeia o que mudou e em quanto tempo.</dd>
+<dt>Erro comum</dt><dd>Prometer resultado sem recorte de prazo e condição. Em nicho regulado, atrai problema.</dd>
+</dl>
+</div></article>
+<article class="card" data-nome="a ou b" data-funil="meio e fundo" data-fam="comparação">
+<div class="shot"><img src="formatos-criativos/assets/cards/a-ou-b.jpg" alt="Referência do formato A ou B" width="209" height="424" loading="lazy"></div>
+<div class="body">
+<h3>A ou B</h3>
+<span class="funil">Meio e fundo</span>
+<p class="oque">Duas opções confrontadas, com indicação de qual vence.</p>
+<dl>
+<dt>Como gravar</dt><dd>As duas opções visíveis ao mesmo tempo, em lados fixos da tela.</dd>
+<dt>Roteiro</dt><dd>Apresenta as duas → aponta o critério de decisão → declara a vencedora e justifica.</dd>
+<dt>Erro comum</dt><dd>Escolher um B obviamente ruim. Vira propaganda e perde credibilidade.</dd>
+</dl>
+</div></article>
+<article class="card" data-nome="use isso para isso" data-funil="meio e fundo" data-fam="comparação">
+<div class="shot"><img src="formatos-criativos/assets/cards/use-isso-para-isso.jpg" alt="Referência do formato Use isso para isso" width="395" height="728" loading="lazy"></div>
+<div class="body">
+<h3>Use isso para isso</h3>
+<span class="funil">Meio e fundo</span>
+<p class="oque">Duas colunas, evite e use, trocando o jeito errado pelo certo item a item.</p>
+<dl>
+<dt>Como gravar</dt><dd>Colunas fixas, vermelha e verde, apresentador ao fundo. Cada linha entra em sequência.</dd>
+<dt>Roteiro</dt><dd>Nomeia o contexto → percorre os pares evite/use → fecha com o par mais impactante.</dd>
+<dt>Erro comum</dt><dd>Mais de seis pares. Vira lista longa e o espectador desiste.</dd>
+</dl>
+</div></article>
+<article class="card" data-nome="tier list" data-funil="topo" data-fam="comparação">
+<div class="shot"><img src="formatos-criativos/assets/cards/tier-list.jpg" alt="Referência do formato Tier list" width="408" height="935" loading="lazy"></div>
+<div class="body">
+<h3>Tier list</h3>
+<span class="funil">Topo</span>
+<p class="oque">Itens classificados em faixas de S a F, montadas ao vivo.</p>
+<dl>
+<dt>Como gravar</dt><dd>Tabela de faixas em metade da tela, apresentador na outra. Os itens entram um a um.</dd>
+<dt>Roteiro</dt><dd>Anuncia o critério → posiciona cada item justificando → termina na escolha mais polêmica.</dd>
+<dt>Erro comum</dt><dd>Classificar itens demais. Cinco a sete cabem num vídeo curto.</dd>
+</dl>
+</div></article>
+</div></section>
+<section class="fam" id="fam-ensino">
+<div class="fam-head"><h2>Ensino</h2><p>Entrega método. Constrói autoridade.</p><span class="count">7</span></div>
+<div class="grid">
+<article class="card" data-nome="exercício" data-funil="topo e meio" data-fam="ensino">
+<div class="shot"><img src="formatos-criativos/assets/cards/exercicio.jpg" alt="Referência do formato Exercício" width="474" height="1021" loading="lazy"></div>
+<div class="body">
+<h3>Exercício</h3>
+<span class="funil">Topo e meio</span>
+<p class="oque">Demonstração de um movimento, técnica ou prática, executada por inteiro.</p>
+<dl>
+<dt>Como gravar</dt><dd>Corpo inteiro ou a parte que importa, ângulo que mostre a execução, repetição suficiente para copiar.</dd>
+<dt>Roteiro</dt><dd>Nomeia o problema que resolve → executa → avisa série, tempo ou frequência.</dd>
+<dt>Erro comum</dt><dd>Não mostrar a execução errada junto. O espectador precisa saber o que evitar.</dd>
+</dl>
+</div></article>
+<article class="card" data-nome="erro comum" data-funil="topo e meio" data-fam="ensino">
+<div class="shot"><img src="formatos-criativos/assets/cards/erro-comum.jpg" alt="Referência do formato Erro comum" width="477" height="1021" loading="lazy"></div>
+<div class="body">
+<h3>Erro comum</h3>
+<span class="funil">Topo e meio</span>
+<p class="oque">Aponta uma prática difundida e errada, e corrige.</p>
+<dl>
+<dt>Como gravar</dt><dd>Imagem ou vídeo do erro sobreposto no topo, apresentador abaixo comentando.</dd>
+<dt>Roteiro</dt><dd>Nomeia o erro de forma reconhecível → explica por que falha → entrega o certo.</dd>
+<dt>Erro comum</dt><dd>Acusar o espectador. O tom corrige a prática, não a pessoa.</dd>
+</dl>
+</div></article>
+<article class="card" data-nome="explicando para criança" data-funil="topo" data-fam="ensino">
+<div class="shot"><img src="formatos-criativos/assets/cards/explicando-para-crianca.jpg" alt="Referência do formato Explicando para criança" width="282" height="448" loading="lazy"></div>
+<div class="body">
+<h3>Explicando para criança</h3>
+<span class="funil">Topo</span>
+<p class="oque">Assunto técnico explicado no nível mais simples possível, com apoio visual.</p>
+<dl>
+<dt>Como gravar</dt><dd>Apoio visual grande e colorido, ritmo de fala mais lento, vocabulário sem jargão.</dd>
+<dt>Roteiro</dt><dd>Declara o assunto e promete a simplificação → analogia concreta → amarra de volta ao termo técnico.</dd>
+<dt>Erro comum</dt><dd>Simplificar tanto que a explicação fica errada.</dd>
+</dl>
+</div></article>
+<article class="card" data-nome="estudo fictício" data-funil="topo" data-fam="ensino">
+<div class="shot"><img src="formatos-criativos/assets/cards/estudo-ficticio.jpg" alt="Referência do formato Estudo fictício" width="212" height="413" loading="lazy"></div>
+<div class="body">
+<h3>Estudo fictício</h3>
+<span class="funil">Topo</span>
+<p class="oque">Dado, pesquisa ou certificado inventado de forma declaradamente lúdica, para ilustrar um ponto.</p>
+<dl>
+<dt>Como gravar</dt><dd>Peça gráfica com cara de documento oficial, apresentada com tom leve.</dd>
+<dt>Roteiro</dt><dd>Apresenta o estudo → desenvolve a ideia real que ele ilustra → fecha.</dd>
+<dt>Erro comum</dt><dd>Não deixar claro que é ficção. Em saúde ou finanças, dado falso vira desinformação.</dd>
+</dl>
+</div></article>
+<article class="card" data-nome="mindmap" data-funil="meio" data-fam="ensino">
+<div class="shot"><img src="formatos-criativos/assets/cards/mindmap.jpg" alt="Referência do formato Mindmap" width="421" height="851" loading="lazy"></div>
+<div class="body">
+<h3>Mindmap</h3>
+<span class="funil">Meio</span>
+<p class="oque">Mapa ou fluxo construído na tela enquanto o apresentador explica as conexões.</p>
+<dl>
+<dt>Como gravar</dt><dd>Gravação de tela do mapa sendo montado, rosto em miniatura num canto.</dd>
+<dt>Roteiro</dt><dd>Nó central → ramificações uma a uma → zoom out mostrando a estrutura completa.</dd>
+<dt>Erro comum</dt><dd>Mapa denso demais. No vertical, cabem poucos nós legíveis.</dd>
+</dl>
+</div></article>
+<article class="card" data-nome="lista rápida" data-funil="topo" data-fam="ensino">
+<div class="shot"><img src="formatos-criativos/assets/cards/lista-rapida.jpg" alt="Referência do formato Lista rápida" width="446" height="876" loading="lazy"></div>
+<div class="body">
+<h3>Lista rápida</h3>
+<span class="funil">Topo</span>
+<p class="oque">Enumeração de itens apresentada em bloco, com a lista visível na tela.</p>
+<dl>
+<dt>Como gravar</dt><dd>Lista inteira visível, apresentador apontando ou destacando item a item.</dd>
+<dt>Roteiro</dt><dd>Anuncia o número de itens no gancho → percorre acelerado → destaca o melhor no fim.</dd>
+<dt>Erro comum</dt><dd>Ler a lista inteira em voz alta. O olho lê mais rápido que o ouvido.</dd>
+</dl>
+</div></article>
+<article class="card" data-nome="passo a passo" data-funil="meio" data-fam="ensino">
+<div class="shot"><img src="formatos-criativos/assets/cards/passo-a-passo.jpg" alt="Referência do formato Passo a passo" width="367" height="778" loading="lazy"></div>
+<div class="body">
+<h3>Passo a passo</h3>
+<span class="funil">Meio</span>
+<p class="oque">Execução de um processo do início ao fim, na ordem real.</p>
+<dl>
+<dt>Como gravar</dt><dd>Captura de tela ou gravação por cima da mão, com rótulo numerado por etapa.</dd>
+<dt>Roteiro</dt><dd>Promete o resultado no gancho → executa sem pular etapas → mostra o resultado pronto.</dd>
+<dt>Erro comum</dt><dd>Pular a etapa óbvia. É exatamente onde o iniciante trava.</dd>
+</dl>
+</div></article>
+</div></section>
+<section class="fam" id="fam-edição">
+<div class="fam-head"><h2>Edição</h2><p>A edição é o diferencial. Retém pelo estímulo visual.</p><span class="count">6</span></div>
+<div class="grid">
+<article class="card" data-nome="musical" data-funil="topo" data-fam="edição">
+<div class="shot"><img src="formatos-criativos/assets/cards/musical.jpg" alt="Referência do formato Musical" width="194" height="424" loading="lazy"></div>
+<div class="body">
+<h3>Musical</h3>
+<span class="funil">Topo</span>
+<p class="oque">Peça construída sobre a música, com cortes no ritmo e estética cinematográfica.</p>
+<dl>
+<dt>Como gravar</dt><dd>Planos curtos, cortes no tempo da batida, pouca ou nenhuma fala.</dd>
+<dt>Roteiro</dt><dd>A música dita a estrutura. Marque as viradas da faixa e encaixe os planos nelas.</dd>
+<dt>Erro comum</dt><dd>Usar faixa comercial em anúncio. O acervo da plataforma libera para orgânico, não para mídia paga.</dd>
+</dl>
+</div></article>
+<article class="card" data-nome="tela verde" data-funil="topo" data-fam="edição">
+<div class="shot"><img src="formatos-criativos/assets/cards/tela-verde.jpg" alt="Referência do formato Tela verde" width="431" height="922" loading="lazy"></div>
+<div class="body">
+<h3>Tela verde</h3>
+<span class="funil">Topo</span>
+<p class="oque">Apresentador recortado sobre uma imagem, print ou vídeo de fundo.</p>
+<dl>
+<dt>Como gravar</dt><dd>Fundo verde liso e bem iluminado, ou o recorte nativo do app. A imagem de fundo é o assunto.</dd>
+<dt>Roteiro</dt><dd>O fundo entrega o fato → o apresentador comenta, contesta ou explica.</dd>
+<dt>Erro comum</dt><dd>Recorte com borda suja. Cabelo mal recortado destrói a percepção de qualidade.</dd>
+</dl>
+</div></article>
+<article class="card" data-nome="clone" data-funil="meio e fundo" data-fam="edição">
+<div class="shot"><img src="formatos-criativos/assets/cards/clone.jpg" alt="Referência do formato Clone" width="455" height="907" loading="lazy"></div>
+<div class="body">
+<h3>Clone</h3>
+<span class="funil">Meio e fundo</span>
+<p class="oque">A mesma pessoa aparece duas ou mais vezes na tela, conversando consigo mesma.</p>
+<dl>
+<dt>Como gravar</dt><dd>Câmera fixa em tripé, sem mover entre as tomadas. Junte com máscara na edição.</dd>
+<dt>Roteiro</dt><dd>Um clone levanta a objeção, o outro responde. O diálogo é o conteúdo.</dd>
+<dt>Erro comum</dt><dd>Mover a câmera entre as tomadas. O fundo desalinha e o truque quebra.</dd>
+</dl>
+</div></article>
+<article class="card" data-nome="tela dividida" data-funil="topo" data-fam="edição">
+<div class="shot"><img src="formatos-criativos/assets/cards/tela-dividida.jpg" alt="Referência do formato Tela dividida" width="442" height="852" loading="lazy"></div>
+<div class="body">
+<h3>Tela dividida</h3>
+<span class="funil">Topo</span>
+<p class="oque">Tela cortada em duas, com conteúdos diferentes em cima e embaixo.</p>
+<dl>
+<dt>Como gravar</dt><dd>Grave as duas fontes separadas. O corte alinhado para não cortar rosto na metade.</dd>
+<dt>Roteiro</dt><dd>Uma parte sustenta a atenção enquanto a outra entrega o conteúdo.</dd>
+<dt>Erro comum</dt><dd>As duas metades competirem. Uma é protagonista, a outra é apoio.</dd>
+</dl>
+</div></article>
+<article class="card" data-nome="tela na tela" data-funil="topo e meio" data-fam="edição">
+<div class="shot"><img src="formatos-criativos/assets/cards/tela-na-tela.jpg" alt="Referência do formato Tela na tela" width="433" height="823" loading="lazy"></div>
+<div class="body">
+<h3>Tela na tela</h3>
+<span class="funil">Topo e meio</span>
+<p class="oque">Um vídeo rodando dentro de outro, como a tela de um celular filmada em cena.</p>
+<dl>
+<dt>Como gravar</dt><dd>Celular físico em cena ou moldura na edição. O conteúdo interno precisa ser legível.</dd>
+<dt>Roteiro</dt><dd>O vídeo interno é o assunto, o externo é o comentário.</dd>
+<dt>Erro comum</dt><dd>Vídeo interno pequeno demais. Se não dá para ler, só atrapalha.</dd>
+</dl>
+</div></article>
+<article class="card" data-nome="vídeo escrito" data-funil="fundo" data-fam="edição">
+<div class="shot"><img src="formatos-criativos/assets/cards/video-escrito.jpg" alt="Referência do formato Vídeo escrito" width="214" height="467" loading="lazy"></div>
+<div class="body">
+<h3>Vídeo escrito</h3>
+<span class="funil">Fundo</span>
+<p class="oque">Peça dominada por texto grande sobre imagem de fundo, sem fala.</p>
+<dl>
+<dt>Como gravar</dt><dd>Fundo com movimento leve, texto em blocos curtos que entram em sequência.</dd>
+<dt>Roteiro</dt><dd>Chamada de atenção no primeiro bloco → informação essencial → ação no último.</dd>
+<dt>Erro comum</dt><dd>Texto demais por bloco. No vertical, poucas palavras por linha.</dd>
+</dl>
+</div></article>
+</div></section>
+<section class="fam" id="fam-prova-social">
+<div class="fam-head"><h2>Prova social</h2><p>Mostra a operação real. Vence objeção de confiança.</p><span class="count">6</span></div>
+<div class="grid">
+<article class="card" data-nome="bastidores do dia" data-funil="topo e meio" data-fam="prova social">
+<div class="shot"><img src="formatos-criativos/assets/cards/bastidores-do-dia.jpg" alt="Referência do formato Bastidores do dia" width="468" height="1021" loading="lazy"></div>
+<div class="body">
+<h3>Bastidores do dia</h3>
+<span class="funil">Topo e meio</span>
+<p class="oque">Registro cronológico do dia de trabalho, com marcação de horário.</p>
+<dl>
+<dt>Como gravar</dt><dd>Clipes curtos ao longo do dia, horário em texto na tela, continuidade cronológica.</dd>
+<dt>Roteiro</dt><dd>Primeiro horário → momentos que mostram método, não só movimento → fecha no fim do dia.</dd>
+<dt>Erro comum</dt><dd>Mostrar rotina sem conteúdo. Cada bloco precisa revelar algo sobre como o trabalho é feito.</dd>
+</dl>
+</div></article>
+<article class="card" data-nome="build in public" data-funil="topo e meio" data-fam="prova social">
+<div class="shot"><img src="formatos-criativos/assets/cards/build-in-public.jpg" alt="Referência do formato Build in public" width="226" height="413" loading="lazy"></div>
+<div class="body">
+<h3>Build in public</h3>
+<span class="funil">Topo e meio</span>
+<p class="oque">Mostra o processo e os números de algo sendo construído, inclusive o que deu errado.</p>
+<dl>
+<dt>Como gravar</dt><dd>Tela do que está sendo construído, com os números visíveis.</dd>
+<dt>Roteiro</dt><dd>Estado atual com número → o que foi testado → o que aprendeu.</dd>
+<dt>Erro comum</dt><dd>Mostrar só vitória. Sem o erro, vira vitrine.</dd>
+</dl>
+</div></article>
+<article class="card" data-nome="ugc" data-funil="topo e meio" data-fam="prova social">
+<div class="shot"><img src="formatos-criativos/assets/cards/ugc.jpg" alt="Referência do formato UGC" width="436" height="900" loading="lazy"></div>
+<div class="body">
+<h3>UGC</h3>
+<span class="funil">Topo e meio</span>
+<p class="oque">Peça gravada em estética de usuário comum, sem produção de marca aparente.</p>
+<dl>
+<dt>Como gravar</dt><dd>Celular na mão, ambiente doméstico, luz natural, sem logo em destaque.</dd>
+<dt>Roteiro</dt><dd>Reação ou uso espontâneo → opinião pessoal → recomendação.</dd>
+<dt>Erro comum</dt><dd>Não sinalizar a parceria quando houver. Publicidade não identificada é problema legal.</dd>
+</dl>
+</div></article>
+<article class="card" data-nome="reunião/atendimento" data-funil="meio e fundo" data-fam="prova social">
+<div class="shot"><img src="formatos-criativos/assets/cards/reuniao-atendimento.jpg" alt="Referência do formato Reunião/atendimento" width="560" height="831" loading="lazy"></div>
+<div class="body">
+<h3>Reunião/atendimento</h3>
+<span class="funil">Meio e fundo</span>
+<p class="oque">Trecho de uma reunião ou atendimento real, mostrando o profissional em ação.</p>
+<dl>
+<dt>Como gravar</dt><dd>Câmera lateral ou de ombro, sem interromper o atendimento.</dd>
+<dt>Roteiro</dt><dd>Entra numa pergunta forte do cliente → mostra a condução → corta na virada.</dd>
+<dt>Erro comum</dt><dd>Expor cliente sem autorização. Consentimento por escrito antes, principalmente em saúde e jurídico.</dd>
+</dl>
+</div></article>
+<article class="card" data-nome="depoimento" data-funil="fundo" data-fam="prova social">
+<div class="shot"><img src="formatos-criativos/assets/cards/depoimento.jpg" alt="Referência do formato Depoimento" width="393" height="804" loading="lazy"></div>
+<div class="body">
+<h3>Depoimento</h3>
+<span class="funil">Fundo</span>
+<p class="oque">Cliente falando do resultado que teve, em câmera.</p>
+<dl>
+<dt>Como gravar</dt><dd>Cliente sentado, enquadramento estável, áudio limpo. Legenda sempre.</dd>
+<dt>Roteiro</dt><dd>Situação antes → o que fez → resultado concreto, com número quando houver.</dd>
+<dt>Erro comum</dt><dd>Depoimento decorado. Pergunte, deixe responder e edite depois.</dd>
+</dl>
+</div></article>
+<article class="card" data-nome="vlog" data-funil="topo" data-fam="prova social">
+<div class="shot"><img src="formatos-criativos/assets/cards/vlog.jpg" alt="Referência do formato Vlog" width="368" height="778" loading="lazy"></div>
+<div class="body">
+<h3>Vlog</h3>
+<span class="funil">Topo</span>
+<p class="oque">Registro pessoal com narração, ritmo solto, estética de diário.</p>
+<dl>
+<dt>Como gravar</dt><dd>Planos variados do ambiente, objetos e mãos, com narração por cima.</dd>
+<dt>Roteiro</dt><dd>Contexto do dia → o acontecimento → reflexão curta.</dd>
+<dt>Erro comum</dt><dd>Vlog sem ponto. Precisa haver uma ideia carregando o registro.</dd>
+</dl>
+</div></article>
+</div></section>
+<section class="fam" id="fam-reação">
+<div class="fam-head"><h2>Reação</h2><p>Pega carona em algo que já existe. Rápido de produzir.</p><span class="count">6</span></div>
+<div class="grid">
+<article class="card" data-nome="resposta a comentário" data-funil="meio" data-fam="reação">
+<div class="shot"><img src="formatos-criativos/assets/cards/resposta-a-comentario.jpg" alt="Referência do formato Resposta a comentário" width="544" height="1021" loading="lazy"></div>
+<div class="body">
+<h3>Resposta a comentário</h3>
+<span class="funil">Meio</span>
+<p class="oque">Resposta a um comentário real recebido, com o print do comentário na tela.</p>
+<dl>
+<dt>Como gravar</dt><dd>Print do comentário no topo, resposta abaixo.</dd>
+<dt>Roteiro</dt><dd>Lê o comentário → responde direto → amplia para o público geral.</dd>
+<dt>Erro comum</dt><dd>Responder só comentário elogioso. A objeção é o que converte.</dd>
+</dl>
+</div></article>
+<article class="card" data-nome="giro de notícia" data-funil="topo" data-fam="reação">
+<div class="shot"><img src="formatos-criativos/assets/cards/giro-de-noticia.jpg" alt="Referência do formato Giro de notícia" width="229" height="450" loading="lazy"></div>
+<div class="body">
+<h3>Giro de notícia</h3>
+<span class="funil">Topo</span>
+<p class="oque">Comentário sobre notícia recente do setor, com a manchete na tela.</p>
+<dl>
+<dt>Como gravar</dt><dd>Print da manchete sobreposto, apresentador comentando.</dd>
+<dt>Roteiro</dt><dd>Manchete → o que significa na prática para o público → o que fazer a respeito.</dd>
+<dt>Erro comum</dt><dd>Só repetir a notícia. O valor está na leitura que só você dá.</dd>
+</dl>
+</div></article>
+<article class="card" data-nome="esquete em duo" data-funil="topo" data-fam="reação">
+<div class="shot"><img src="formatos-criativos/assets/cards/esquete-em-duo.jpg" alt="Referência do formato Esquete em duo" width="208" height="413" loading="lazy"></div>
+<div class="body">
+<h3>Esquete em duo</h3>
+<span class="funil">Topo</span>
+<p class="oque">Encenação com dois personagens, geralmente cliente e profissional.</p>
+<dl>
+<dt>Como gravar</dt><dd>Marcação visual clara de quem é quem: figurino, rótulo na testa ou posição fixa.</dd>
+<dt>Roteiro</dt><dd>Situação reconhecível → conflito → virada que entrega a mensagem.</dd>
+<dt>Erro comum</dt><dd>Piada que não leva a lugar nenhum. O humor carrega o argumento.</dd>
+</dl>
+</div></article>
+<article class="card" data-nome="react" data-funil="topo" data-fam="reação">
+<div class="shot"><img src="formatos-criativos/assets/cards/react.jpg" alt="Referência do formato React" width="462" height="922" loading="lazy"></div>
+<div class="body">
+<h3>React</h3>
+<span class="funil">Topo</span>
+<p class="oque">Reação a um vídeo, print ou notícia de terceiro, com o conteúdo original na tela.</p>
+<dl>
+<dt>Como gravar</dt><dd>Conteúdo reagido em destaque, rosto menor num canto.</dd>
+<dt>Roteiro</dt><dd>Deixa o original rodar o suficiente para o contexto → pausa → comenta.</dd>
+<dt>Erro comum</dt><dd>Reagir sem agregar nada. Sem comentário substancial, é republicação do trabalho alheio.</dd>
+</dl>
+</div></article>
+<article class="card" data-nome="fofoca" data-funil="topo" data-fam="reação">
+<div class="shot"><img src="formatos-criativos/assets/cards/fofoca.jpg" alt="Referência do formato Fofoca" width="213" height="456" loading="lazy"></div>
+<div class="body">
+<h3>Fofoca</h3>
+<span class="funil">Topo</span>
+<p class="oque">Conversa em tom de bastidor sobre algo do setor, geralmente entre duas pessoas.</p>
+<dl>
+<dt>Como gravar</dt><dd>Duas pessoas em conversa lateral, câmera como se estivesse escutando.</dd>
+<dt>Roteiro</dt><dd>Entra no meio da conversa → o assunto se revela → fecha com a opinião.</dd>
+<dt>Erro comum</dt><dd>Falar de pessoa ou empresa identificável de forma negativa. Risco jurídico real.</dd>
+</dl>
+</div></article>
+<article class="card" data-nome="pov" data-funil="topo" data-fam="reação">
+<div class="shot"><img src="formatos-criativos/assets/cards/pov.jpg" alt="Referência do formato POV" width="389" height="803" loading="lazy"></div>
+<div class="body">
+<h3>POV</h3>
+<span class="funil">Topo</span>
+<p class="oque">Câmera na posição dos olhos de alguém, colocando o espectador dentro da cena.</p>
+<dl>
+<dt>Como gravar</dt><dd>Câmera no corpo ou na altura dos olhos, movimento contínuo.</dd>
+<dt>Roteiro</dt><dd>Texto na tela declara de quem é o ponto de vista → a cena entrega a experiência.</dd>
+<dt>Erro comum</dt><dd>POV que não é POV. Se a câmera mostra a pessoa, o formato quebrou.</dd>
+</dl>
+</div></article>
+</div></section>
+<section class="fam" id="fam-nativo">
+<div class="fam-head"><h2>Nativo</h2><p>Imita o conteúdo orgânico da plataforma onde roda.</p><span class="count">2</span></div>
+<div class="grid">
+<article class="card" data-nome="carrossel" data-funil="meio" data-fam="nativo">
+<div class="shot"><img src="formatos-criativos/assets/cards/carrossel.jpg" alt="Referência do formato Carrossel" width="551" height="909" loading="lazy"></div>
+<div class="body">
+<h3>Carrossel</h3>
+<span class="funil">Meio</span>
+<p class="oque">Sequência de cards estáticos navegáveis, do gancho até a ação.</p>
+<dl>
+<dt>Como gravar</dt><dd>Primeiro card carrega a promessa, os do meio uma ideia cada, o último pede a ação.</dd>
+<dt>Roteiro</dt><dd>Entre quatro e oito cards. Título curto por card, apoio opcional.</dd>
+<dt>Erro comum</dt><dd>Texto do primeiro card pequeno demais. Ele é a miniatura e decide se alguém desliza.</dd>
+</dl>
+</div></article>
+<article class="card" data-nome="stories nativo" data-funil="fundo" data-fam="nativo">
+<div class="shot"><img src="formatos-criativos/assets/cards/stories-nativo.jpg" alt="Referência do formato Stories nativo" width="369" height="803" loading="lazy"></div>
+<div class="body">
+<h3>Stories nativo</h3>
+<span class="funil">Fundo</span>
+<p class="oque">Peça com cara de story comum: fundo liso, texto em blocos, sem produção.</p>
+<dl>
+<dt>Como gravar</dt><dd>Monte no próprio app ou imite o visual dele. Vertical cheio, sem borda.</dd>
+<dt>Roteiro</dt><dd>Gancho em uma linha → lista de entregas com marcadores → seta apontando para a ação.</dd>
+<dt>Erro comum</dt><dd>Parecer anúncio. Arte de agência derruba o efeito.</dd>
+</dl>
+</div></article>
+</div></section>
+
+  <p class="vazio" id="vazio">Nenhum formato com esse filtro.</p>
+
+  <section class="nota">
+    <p><b>Uso.</b> Os prints são de criadores terceiros e servem como referência interna do time. Não republique as imagens.</p>
+    <p><b>Falta um.</b> "Horizontal com edição cinemática" está no quadro original mas não veio print dele, então não tem ficha aqui.</p>
+  </section>
+</div>
+
+<script>
+(function(){
+  var q = document.getElementById('q');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
+  var botoes = Array.prototype.slice.call(document.querySelectorAll('.fbtn'));
+  var vazio = document.getElementById('vazio');
+  var funil = null;
+
+  function aplicar(){
+    var termo = (q.value || '').trim().toLowerCase();
+    var visiveis = 0;
+    cards.forEach(function(c){
+      var okTermo = !termo || c.textContent.toLowerCase().indexOf(termo) !== -1;
+      var okFunil = !funil || c.getAttribute('data-funil').indexOf(funil) !== -1;
+      var mostrar = okTermo && okFunil;
+      c.hidden = !mostrar;
+      if (mostrar) visiveis++;
+    });
+    document.querySelectorAll('.fam').forEach(function(s){
+      s.hidden = !s.querySelector('.card:not([hidden])');
+    });
+    vazio.style.display = visiveis ? 'none' : 'block';
+  }
+
+  q.addEventListener('input', aplicar);
+  botoes.forEach(function(b){
+    b.addEventListener('click', function(){
+      var f = b.getAttribute('data-f');
+      funil = (funil === f) ? null : f;
+      botoes.forEach(function(o){
+        o.setAttribute('aria-pressed', o.getAttribute('data-f') === funil ? 'true' : 'false');
+      });
+      aplicar();
+    });
+  });
+})();
+</script>
+</body>
+</html>

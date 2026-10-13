@@ -1,31 +1,63 @@
 ---
 name: formatos-criativos
-description: Catálogo de 41 formatos de criativo para Reels, TikTok e anúncios de vídeo, com roteiro e direção de gravação para cada um. Use ao briefar criativo, transformar um tema em roteiro gravável, montar linha editorial, variar criativo que fadigou, escolher formato por estágio de funil, ou quando alguém perguntar o que significa o nome de um formato (tela na tela, A ou B, build in public, tier list).
+description: Catálogo de 41 formatos de criativo para Reels, TikTok e anúncios de vídeo, com roteiro pronto, copy e direção de gravação. Use ao briefar criativo, transformar um tema em roteiro gravável, escrever copy ou legenda de post, montar linha editorial, variar criativo que fadigou, escolher formato por estágio de funil, pesquisar referência de criativo, ou quando alguém perguntar o que significa o nome de um formato (tela na tela, A ou B, build in public, tier list).
 ---
 
 # Formatos de criativo
 
-Transforma um tema em roteiro gravável, escolhendo o formato pela função que a peça precisa cumprir.
+Transforma um tema em conteúdo pronto para gravar: formato escolhido pela função, roteiro estruturado e copy escrita.
 
-## Quando carregar o catálogo
+## Arquivos e quando carregar cada um
 
-O catálogo completo com as 41 fichas está em `references/catalogo.md`. Leia esse arquivo sempre que precisar da ficha de um formato: o que é, como gravar, estrutura de roteiro, estágio de funil e erro comum. Não tente responder de memória sobre um formato específico.
+| Arquivo | Carregue quando |
+|---|---|
+| `references/catalogo.md` | Precisar da ficha de um formato. Sempre, antes de escrever roteiro. Nunca responda de memória sobre um formato específico. |
+| `references/copy.md` | For escrever qualquer texto: gancho, roteiro, legenda, chamada. Traz também as regras anti-invenção. |
+| `references/pesquisa.md` | A pessoa perguntar qual formato entrega mais, pedir dado de benchmark, ou quiser ferramenta de pesquisa de criativo. |
+| `assets/cards/<slug>.jpg` | A pessoa pedir exemplo visual do formato. |
 
-As imagens de referência de cada formato estão em `assets/cards/<slug>.jpg`. Use quando a pessoa pedir exemplo visual ou perguntar como o formato aparece na tela.
+## Fluxo para entregar conteúdo pronto
 
-## Fluxo para briefar um criativo
+1. **Descubra a função antes do formato.** A peça é para quem ainda não sabe que tem o problema (topo), para quem compara soluções (meio), ou para quem já quer resolver (fundo)? O formato vem depois dessa resposta, nunca antes.
 
-1. **Descubra a função antes do formato.** Pergunte, ou deduza do contexto: a peça é para quem ainda não sabe que tem o problema (topo), para quem compara soluções (meio), ou para quem já quer resolver (fundo)? O formato vem depois dessa resposta, nunca antes.
+2. **Levante o que só a pessoa sabe.** Antes de escrever, pergunte o que falta: números reais, casos, oferta, prazo, credencial. Não preencha nenhum desses por conta própria — `references/copy.md` detalha por quê.
 
-2. **Escolha de dois a três formatos**, não um. Mais de um formato permite teste real no leilão. Use a tabela de escolha abaixo.
+3. **Escolha de dois a três formatos**, não um. Variação de formato é o que gera teste real no leilão e no orgânico. Use a tabela de escolha abaixo.
 
-3. **Carregue a ficha** de cada formato escolhido em `references/catalogo.md`.
+4. **Carregue a ficha** de cada formato escolhido em `references/catalogo.md`.
 
-4. **Escreva o roteiro seguindo a estrutura da ficha.** A estrutura é o esqueleto; o tema é a carne. Não invente estrutura nova quando a ficha já tem uma.
+5. **Escreva o roteiro na estrutura da ficha**, em três camadas separadas: TELA, FALA e TEXTO, com o tempo de cada bloco. A estrutura da ficha é o esqueleto; o tema é a carne.
 
-5. **Entregue em formato gravável:** o que aparece na tela, o que é falado, e o texto sobreposto. Separe esses três. Quem grava precisa saber onde olhar.
+6. **Escreva a legenda e a chamada**, seguindo `references/copy.md`. A legenda não repete o vídeo.
 
-6. **Aponte o erro comum da ficha** ao final do brief, como alerta para quem vai gravar.
+7. **Rode a checagem final** de `references/copy.md` antes de entregar, e aponte o erro comum da ficha como alerta para quem grava.
+
+## Entrega padrão
+
+Para cada formato escolhido:
+
+```
+FORMATO: <nome> — <funil>
+
+ROTEIRO
+0-3s   TELA: …  |  FALA: …  |  TEXTO: …
+3-10s  TELA: …  |  FALA: …  |  TEXTO: …
+…
+
+LEGENDA
+<primeira linha, que é o segundo gancho>
+<corpo>
+<chamada>
+
+GRAVAÇÃO
+<direção da ficha>
+
+CUIDADO
+<erro comum da ficha>
+
+FALTA DE VOCÊ
+<lacunas marcadas como [INSERIR: …]>
+```
 
 ## Tabela de escolha
 
@@ -48,6 +80,21 @@ As imagens de referência de cada formato estão em `assets/cards/<slug>.jpg`. U
 - **Reação e conversa** — pega carona no que já existe. Rápido de produzir.
 - **Nativo de plataforma** — imita o conteúdo orgânico de onde roda.
 
+## Escolha por objetivo de distribuição
+
+Duas bases grandes de 2026 concordam que carrossel tem a maior taxa de engajamento, imagem única é a mais fraca, e Reels puxa mais comentário. **Divergem sobre qual alcança mais gente.** `references/pesquisa.md` traz os números, as fontes e por que se contradizem.
+
+Na prática:
+
+- Alcançar quem não conhece → Reels, formato de topo.
+- Aprofundar com quem já segue → Carrossel, formato de meio.
+- Gerar conversa → Reels.
+- Imagem única → só para aviso simples, oferta local ou data.
+
+Nunca afirme que um formato "entrega mais" como fato estabelecido. Benchmark serve para formular hipótese; só o teste na conta da pessoa decide.
+
+**Para testar formato sem queimar o feed:** Trial Reels publica só para quem não segue. Mesmo tema, três formatos, e o vencedor vai ao perfil.
+
 ## Regras que valem para todo formato
 
 1. **Os três primeiros segundos entregam algo.** Nenhum formato sobrevive a uma abertura de apresentação pessoal.
@@ -55,6 +102,14 @@ As imagens de referência de cada formato estão em `assets/cards/<slug>.jpg`. U
 3. **Vertical, pensado para tela de celular.** Texto ilegível a um braço de distância não existe.
 4. **Uma ideia por peça.** Duas ideias viram zero.
 5. **Teste o formato, não só a copy.** O mesmo tema em formatos diferentes gera variação real de criativo no leilão.
+
+## Não inventar
+
+Regra que vale acima de qualquer uma acima. Nunca escreva num roteiro ou legenda, sem a pessoa ter fornecido: número de resultado, estudo ou fonte, depoimento ou caso de cliente, credencial, promessa de prazo ou garantia.
+
+Faltando o dado: pergunte, escreva a frase sem ele, ou marque `[INSERIR: …]`. Nunca preencha com estimativa plausível — número inventado que soa razoável é pior que espaço em branco, porque passa pela revisão.
+
+`references/copy.md` tem o detalhamento e a checagem final.
 
 ## Cuidados que valem revisão antes de publicar
 

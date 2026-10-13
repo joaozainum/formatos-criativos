@@ -11,15 +11,18 @@ Ela também responde o que o nome de um formato quer dizer, que é a dúvida mai
 ## Estrutura
 
 ```
+index.html                      pagina de consulta do time (GitHub Pages)
 formatos-criativos/
-├── SKILL.md                    fluxo de brief, tabela de escolha e regras gerais
+├── SKILL.md                    fluxo, tabela de escolha e regras gerais
 ├── references/
-│   └── catalogo.md             as 41 fichas completas
+│   ├── catalogo.md             as 41 fichas completas
+│   ├── copy.md                 ganchos, roteiro, legenda e regras anti-invencao
+│   └── pesquisa.md             ferramentas de pesquisa e benchmark com fontes
 └── assets/
     └── cards/                  imagem de referência de cada formato
 ```
 
-O `SKILL.md` fica enxuto de propósito. O catálogo só é carregado quando a ficha de um formato é realmente necessária.
+O `SKILL.md` fica enxuto de propósito. Cada referência só é carregada quando a tarefa precisa dela.
 
 ## Como instalar
 
@@ -32,7 +35,13 @@ Peça naturalmente, sem citar a skill:
 - "Preciso de três criativos sobre dor lombar para topo de funil"
 - "O que quer dizer o formato tela na tela?"
 - "Esse criativo fadigou, me dá variações em outros formatos"
-- "Transforma esse tema em roteiro"
+- "Transforma esse tema em roteiro com legenda pronta"
+- "Qual formato entrega mais no Instagram hoje?"
+- "Que ferramenta usar para pesquisar criativo de concorrente?"
+
+## Consulta online
+
+A página em `index.html` publica o catálogo com busca por nome e filtro por estágio de funil, para o time consultar sem precisar de conta no GitHub.
 
 ## Formatos cobertos
 

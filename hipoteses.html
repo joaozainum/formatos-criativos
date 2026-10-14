@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Dores latentes de quem produz conteudo e hipoteses de feature para a ferramenta de formatos, com fontes e teste de validacao.">
+<title>Hipóteses de Produto</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,700&family=Mona+Sans:wght@500;600&display=swap">
+<style>
+/* Mesmo sistema Framer da ferramenta: canvas preto, display apertado, gradiente so como pontuacao. */
+:root{
+  --primary:#ffffff; --on-primary:#000000; --accent:#0099ff;
+  --ink:#ffffff; --ink-muted:#999999;
+  --canvas:#090909; --surface-1:#141414; --surface-2:#1c1c1c;
+  --hairline:#262626; --hairline-soft:#1a1a1a;
+  --g-violet:#6a4cf5; --g-magenta:#d44df0; --g-orange:#ff7a3d;
+  --success:#22c55e;
+  --display:"Mona Sans","Inter",system-ui,sans-serif;
+  --body:"Inter",system-ui,-apple-system,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--canvas);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.35;letter-spacing:-.15px;
+  font-feature-settings:"cv01","cv05","cv09","cv11","ss03";padding-inline:20px;padding-block:0 96px;-webkit-font-smoothing:antialiased}
+img{max-width:100%}
+.wrap{max-width:860px;margin-inline:auto}
+a{color:var(--accent)}
+
+.hero{padding-block:72px 40px}
+.eyebrow{font-size:13px;font-weight:500;color:var(--ink-muted);letter-spacing:-.13px;margin:0 0 14px}
+h1{font-family:var(--display);font-weight:600;font-size:clamp(40px,8vw,72px);line-height:.98;letter-spacing:-.045em;margin:0;max-width:16ch;text-wrap:balance}
+.lead{color:var(--ink-muted);font-size:18px;line-height:1.35;margin:20px 0 0;max-width:56ch}
+
+h2{font-family:var(--display);font-weight:600;font-size:32px;line-height:1.13;letter-spacing:-1px;margin:56px 0 8px}
+.sub2{color:var(--ink-muted);margin:0 0 24px;max-width:58ch}
+h3{font-family:var(--display);font-weight:600;font-size:22px;line-height:1.2;letter-spacing:-.8px;margin:0}
+
+.aviso{background:var(--surface-1);border-left:2px solid var(--g-orange);border-radius:0 10px 10px 0;padding:20px 22px;margin-block:28px}
+.aviso p{margin:0;color:var(--ink-muted)}
+.aviso b{color:var(--ink)}
+
+.dor{background:var(--surface-1);border-radius:20px;padding:24px;margin-bottom:15px}
+.dor-top{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap;margin-bottom:12px}
+.tagd{font-size:12px;font-weight:500;border-radius:6px;padding:5px 9px;white-space:nowrap}
+.t-declarada{background:rgba(153,153,153,.14);color:var(--ink-muted)}
+.t-latente{background:rgba(212,77,240,.16);color:var(--g-magenta)}
+.dor p{margin:0 0 10px}
+.dor p:last-child{margin-bottom:0}
+.evid{border-top:1px solid var(--hairline);margin-top:14px;padding-top:12px;font-size:13px;color:var(--ink-muted)}
+.evid b{color:var(--ink);font-weight:500}
+
+.hip{background:var(--surface-1);border-radius:20px;overflow:hidden;margin-bottom:15px}
+.hip-head{padding:22px 24px 16px;display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap}
+.num{font-family:var(--display);font-size:22px;font-weight:600;color:var(--ink-muted);letter-spacing:-.8px;font-variant-numeric:tabular-nums}
+.hip-t{flex:1;min-width:200px}
+.hip-t p{margin:6px 0 0;color:var(--ink-muted);font-size:14px}
+.selo{display:flex;gap:6px;flex-wrap:wrap}
+.chip{font-size:12px;font-weight:500;border-radius:6px;padding:5px 9px;background:var(--surface-2);color:var(--ink-muted);white-space:nowrap}
+.c-alto{color:var(--success)}
+.c-medio{color:var(--g-orange)}
+.c-risco{color:var(--g-magenta)}
+.hip-body{padding:0 24px 22px;display:grid;grid-template-columns:120px 1fr;gap:0 16px;border-top:1px solid var(--hairline);padding-top:14px;margin-top:2px}
+.hip-body dt{font-size:12px;font-weight:500;color:var(--ink-muted);padding-block:7px}
+.hip-body dd{margin:0;font-size:14px;padding-block:7px;min-width:0;overflow-wrap:anywhere}
+@media (max-width:620px){
+  .hip-body{grid-template-columns:1fr;gap:0}
+  .hip-body dt{padding-bottom:1px}
+  .hip-body dd{padding-top:0;padding-bottom:12px}
+}
+
+.ordem{background:var(--g-violet);border-radius:30px;padding:32px;margin-block:40px}
+.ordem h2{margin:0 0 14px;font-size:32px}
+.ordem ol{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:10px;font-size:16px}
+.ordem b{font-weight:600}
+@media (max-width:620px){.ordem{padding:24px;border-radius:20px}}
+
+.naofazer{border:1px solid var(--hairline);border-radius:20px;padding:24px;margin-top:15px}
+.naofazer h3{margin-bottom:12px}
+.naofazer ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:9px;color:var(--ink-muted)}
+.naofazer b{color:var(--ink);font-weight:500}
+
+.fontes{border-top:1px solid var(--hairline-soft);margin-top:56px;padding-top:28px;font-size:13px;color:var(--ink-muted)}
+.fontes h3{font-size:18px;margin-bottom:14px}
+.fontes ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:9px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <p class="eyebrow">Ferramentas de Formatos · pesquisa e roadmap</p>
+  <h1>O que trava quem publica todo dia.</h1>
+  <p class="lead">Seis dores levantadas em pesquisa, separadas entre o que as pessoas reclamam e o que realmente as trava. Depois, oito hipóteses de feature ligadas a elas, cada uma com um jeito barato de testar antes de construir.</p>
+</header>
+
+<div class="aviso">
+  <p><b>Leia como hipótese, não como verdade.</b> A maior parte dos números abaixo vem de pesquisas de empresas que vendem a solução para o problema que mediram. Separei o que tem metodologia declarada do que é afirmação solta. Nenhuma feature aqui está validada com o seu time: a coluna "como testar" existe para isso.</p>
+</div>
+
+<h2>Parte 1 — As dores</h2>
+<p class="sub2">Ordenadas do que mais aparece nas pesquisas para o que menos aparece, mas que é onde mora a oportunidade.</p>
+
+<article class="dor">
+  <div class="dor-top"><h3>1. Volume, não qualidade</h3><span class="tagd t-declarada">Declarada</span></div>
+  <p>Produzir conteúdo bom com constância virou a maior queixa, e cresceu rápido: saiu de 17% para mais da metade dos profissionais em um ano. A segunda queixa é se destacar no feed, com 41%.</p>
+  <p>A leitura óbvia é "preciso produzir mais". A leitura útil é outra: ninguém reclama de falta de ideia, reclama de não dar conta. O gargalo é o tempo entre decidir o tema e ter a peça pronta, não a origem da ideia.</p>
+  <p class="evid"><b>Fonte:</b> HubSpot, mais de 1.100 profissionais. Artigo atualizado em maio de 2026, sem data de campo nem metodologia declarada.</p>
+</article>
+
+<article class="dor">
+  <div class="dor-top"><h3>2. A pessoa é o time inteiro</h3><span class="tagd t-declarada">Declarada</span></div>
+  <p>46% relatam sintomas de esgotamento. 75% dizem que são cobrados por responsabilidades demais ao mesmo tempo. Perto de 60% trabalham sozinhos. Quase 80% lidam com pedido de última hora com frequência.</p>
+  <p>O que isso significa para a ferramenta: qualquer coisa que exija configurar, manter ou preencher antes de dar retorno não vai ser usada. A pessoa não tem a folga para investir hoje em troca de ganho amanhã.</p>
+  <p class="evid"><b>Fonte:</b> Metricool, 927 profissionais, campo de 19 a 26 de janeiro de 2026. É a pesquisa com metodologia mais clara de todas as que encontrei.</p>
+</article>
+
+<article class="dor">
+  <div class="dor-top"><h3>3. Quase todo criativo morre sem chance</h3><span class="tagd t-latente">Latente</span></div>
+  <p>Cerca de 50% dos anúncios recebem pouco ou nenhum investimento. Só 5% viram ganhador de verdade. E 6% dos anúncios levam a maior parte da verba da conta.</p>
+  <p>A conta que ninguém faz: para achar um ganhador por mês, é preciso colocar algo perto de 20 peças no ar. Contas no quartil de cima sobem de duas a três vezes mais criativo que as de mesmo orçamento.</p>
+  <p>Isso reposiciona o catálogo. Ele não é uma biblioteca de consulta: é a máquina que sustenta volume de teste. Quem precisa de 20 peças por mês não pode decidir formato no improviso 20 vezes.</p>
+  <p class="evid"><b>Fonte:</b> Motion, mais de 550 mil anúncios, mais de 6 mil anunciantes, cerca de US$ 1,3 bilhão em mídia, de setembro de 2025 a janeiro de 2026. É o dado mais sólido deste documento. Os recortes por faixa de investimento vieram de um resumo de terceiro, não do relatório original.</p>
+</article>
+
+<article class="dor">
+  <div class="dor-top"><h3>4. A equipe não lembra do que já aprendeu</h3><span class="tagd t-latente">Latente</span></div>
+  <p>O nome que deram para isso é perda de memória criativa: o aprendizado fica na cabeça das pessoas, não num lugar compartilhado. Os sintomas são reconhecíveis: o mesmo comentário volta na revisão, decisão já fechada é rediscutida, briefing não cita a campanha que já resolveu problema igual, e o motivo de uma escolha some.</p>
+  <p>Ninguém abre um chamado dizendo "nossa equipe não tem memória". Abre dizendo que está sem ideia, ou que o criativo não performa. A causa é a mesma.</p>
+  <p class="evid"><b>Fonte:</b> Superside, empresa que vende serviço criativo. Descrição qualitativa consistente; os números que citam são de pesquisa própria ou encomendada. <b>Não existe estatística que meça isso direto.</b></p>
+</article>
+
+<article class="dor">
+  <div class="dor-top"><h3>5. Repetição por esquecimento, não por preguiça</h3><span class="tagd t-latente">Latente</span></div>
+  <p>Este é o que eu considero mais acionável e menos discutido. Quem publica todo dia volta sempre aos mesmos cinco ou seis formatos, não porque goste, mas porque são os que vêm à cabeça sob pressão. O catálogo tem 41. Sem marcar o que já rodou, 35 nunca saem do papel.</p>
+  <p>A ferramenta já tem a peça que resolve isso, o "marcar como usado", mas ela está passiva: só funciona se a pessoa lembrar de usar. O dado de que metade das peças não recebe verba sugere que o problema não é escolher mal, é escolher pouco.</p>
+  <p class="evid"><b>Evidência:</b> cruzamento meu entre o dado de volume da Motion e a descrição de memória criativa. <b>Não tem pesquisa medindo isso.</b> É a hipótese mais frágil em evidência e a mais fácil de testar.</p>
+</article>
+
+<article class="dor">
+  <div class="dor-top"><h3>6. O briefing ruim custa caro, mas ninguém mede</h3><span class="tagd t-latente">Latente</span></div>
+  <p>78% dos líderes de criação dizem que a demanda já passou da capacidade. O retrabalho por briefing vago aparece em todo artigo do setor, sempre de forma qualitativa: "a quarta, quinta ou sexta rodada de revisão".</p>
+  <p>Procurei número confiável sobre quantas rodadas de revisão um briefing ruim gera, e não existe. O que existe é consenso de que acontece.</p>
+  <p class="evid"><b>Fonte:</b> Superside, sem fonte declarada para o número de 78%.</p>
+</article>
+
+<h2>Parte 2 — As hipóteses</h2>
+<p class="sub2">Cada uma responde a uma dor acima. "Aposta" é o quanto eu acredito; "esforço" é o que custa construir. Nenhuma delas está validada.</p>
+
+<article class="hip">
+  <div class="hip-head">
+    <span class="num">01</span>
+    <div class="hip-t"><h3>Modo pauta da semana</h3>
+      <p>Em vez de escolher um formato, a pessoa diz quantas peças precisa e a ferramenta devolve uma combinação de formatos variados, equilibrada por funil e por esforço.</p></div>
+    <div class="selo"><span class="chip c-alto">Aposta alta</span><span class="chip">Esforço médio</span></div>
+  </div>
+  <dl class="hip-body">
+    <dt>Dor</dt><dd>3 e 5. Ataca volume de teste e repetição de uma vez só.</dd>
+    <dt>Por quê</dt><dd>Sustentar cerca de 20 peças no ar por mês exige decidir em lote, não peça a peça. Hoje a ferramenta obriga 20 decisões individuais.</dd>
+    <dt>Como testar</dt><dd>Antes de construir: monte a pauta da próxima semana à mão, com a ferramenta atual, e cronometre. Se levar menos de 10 minutos, a feature não resolve dor real.</dd>
+  </dl>
+</article>
+
+<article class="hip">
+  <div class="hip-head">
+    <span class="num">02</span>
+    <div class="hip-t"><h3>Diário de resultado por formato</h3>
+      <p>Ao marcar um formato como usado, um campo opcional pergunta como foi: funcionou, não funcionou, ou mediano. Com o tempo, a ferramenta mostra quais formatos funcionam nessa conta.</p></div>
+    <div class="selo"><span class="chip c-alto">Aposta alta</span><span class="chip">Esforço médio</span><span class="chip c-risco">Risco de abandono</span></div>
+  </div>
+  <dl class="hip-body">
+    <dt>Dor</dt><dd>4. É a memória da equipe que hoje não existe em lugar nenhum.</dd>
+    <dt>Por quê</dt><dd>Benchmark de mercado diz o que funciona em média. A conta da pessoa é a única fonte confiável sobre a conta dela. Em três meses isso vale mais que qualquer pesquisa.</dd>
+    <dt>Risco</dt><dd>É registro manual, e a dor 2 diz que ninguém tem folga para alimentar sistema. Se custar mais que um toque, morre.</dd>
+    <dt>Como testar</dt><dd>Registre à mão numa planilha por três semanas. Se você mesma não mantiver, o time também não mantém.</dd>
+  </dl>
+</article>
+
+<article class="hip">
+  <div class="hip-head">
+    <span class="num">03</span>
+    <div class="hip-t"><h3>Rotação que cobra</h3>
+      <p>A ferramenta mostra quantos formatos ainda não foram usados e sugere o mais antigo sem uso, em vez de esperar a pessoa lembrar de filtrar.</p></div>
+    <div class="selo"><span class="chip c-alto">Aposta alta</span><span class="chip c-alto">Esforço baixo</span></div>
+  </div>
+  <dl class="hip-body">
+    <dt>Dor</dt><dd>5. Transforma o marcador de passivo em ativo.</dd>
+    <dt>Por quê</dt><dd>Já existe toda a estrutura: o registro de usado e o sorteio. É juntar os dois e mostrar na frente.</dd>
+    <dt>Como testar</dt><dd>Esta é barata o bastante para construir antes de validar. Uma ou duas horas.</dd>
+  </dl>
+</article>
+
+<article class="hip">
+  <div class="hip-head">
+    <span class="num">04</span>
+    <div class="hip-t"><h3>Variação do mesmo tema</h3>
+      <p>Um campo para escrever o tema. A ferramenta devolve o mesmo tema montado em três formatos diferentes, prontos para gravar.</p></div>
+    <div class="selo"><span class="chip c-alto">Aposta alta</span><span class="chip">Esforço médio</span></div>
+  </div>
+  <dl class="hip-body">
+    <dt>Dor</dt><dd>1 e 3. Encurta o caminho entre ter o tema e ter a peça.</dd>
+    <dt>Por quê</dt><dd>É o jeito mais barato de gerar volume real: um tema vira três peças legitimamente diferentes no leilão, não três variações cosméticas.</dd>
+    <dt>Como testar</dt><dd>Me peça isso numa conversa, com um tema real. Se o resultado servir para gravar sem retrabalho, vira feature.</dd>
+  </dl>
+</article>
+
+<article class="hip">
+  <div class="hip-head">
+    <span class="num">05</span>
+    <div class="hip-t"><h3>Filtro por equipamento e tempo</h3>
+      <p>Em vez de "esforço baixo", a pessoa diz o que tem: só celular, 20 minutos, sozinha, sem edição. A ferramenta mostra o que cabe nisso.</p></div>
+    <div class="selo"><span class="chip c-medio">Aposta média</span><span class="chip c-alto">Esforço baixo</span></div>
+  </div>
+  <dl class="hip-body">
+    <dt>Dor</dt><dd>2. Fala a língua de quem está sozinho e com pressa.</dd>
+    <dt>Por quê</dt><dd>Os metadados já existem no código. É mudar o rótulo e combinar os filtros.</dd>
+    <dt>Ressalva</dt><dd>Pode ser só troca de nome sem ganho real. Os filtros atuais talvez já resolvam.</dd>
+    <dt>Como testar</dt><dd>Pergunte a duas pessoas do time como elas descreveriam a situação de gravar hoje. Se usarem essas palavras, vale.</dd>
+  </dl>
+</article>
+
+<article class="hip">
+  <div class="hip-head">
+    <span class="num">06</span>
+    <div class="hip-t"><h3>Briefing que sai no formato do destino</h3>
+      <p>O botão de copiar briefing entrega direto no formato do ClickUp ou do Notion, em vez de texto corrido.</p></div>
+    <div class="selo"><span class="chip c-medio">Aposta média</span><span class="chip c-alto">Esforço baixo</span></div>
+  </div>
+  <dl class="hip-body">
+    <dt>Dor</dt><dd>6. Tira o atrito entre decidir e encomendar.</dd>
+    <dt>Por quê</dt><dd>Você já usa ClickUp. O briefing que chega formatado tem mais chance de ser seguido do que o que precisa ser reorganizado.</dd>
+    <dt>Como testar</dt><dd>Cole o briefing atual numa tarefa do ClickUp. Se ficar legível, não precisa de feature.</dd>
+  </dl>
+</article>
+
+<article class="hip">
+  <div class="hip-head">
+    <span class="num">07</span>
+    <div class="hip-t"><h3>Biblioteca de gancho por formato</h3>
+      <p>Cada formato ganha três a cinco aberturas específicas dele, prontas para adaptar ao tema.</p></div>
+    <div class="selo"><span class="chip c-medio">Aposta média</span><span class="chip">Esforço alto</span></div>
+  </div>
+  <dl class="hip-body">
+    <dt>Dor</dt><dd>1. O gancho é onde a peça morre, e é o que mais trava na hora de escrever.</dd>
+    <dt>Por quê</dt><dd>O conteúdo já está escrito no módulo de copy do repositório; falta trazer para a página e especializar por formato.</dd>
+    <dt>Risco</dt><dd>Gancho pronto demais vira peça genérica. Se todo mundo do seu nicho usar a mesma abertura, ela para de funcionar.</dd>
+    <dt>Como testar</dt><dd>Escreva os ganchos de três formatos e use por duas semanas. Veja se ajudam ou engessam.</dd>
+  </dl>
+</article>
+
+<article class="hip">
+  <div class="hip-head">
+    <span class="num">08</span>
+    <div class="hip-t"><h3>Histórico compartilhado pelo time</h3>
+      <p>O registro de usado e o resultado deixam de ser do navegador e passam a ser da equipe, com quem usou, quando e o que deu.</p></div>
+    <div class="selo"><span class="chip c-risco">Aposta incerta</span><span class="chip">Esforço alto</span></div>
+  </div>
+  <dl class="hip-body">
+    <dt>Dor</dt><dd>4. É a memória de equipe de verdade, não a individual.</dd>
+    <dt>Por quê</dt><dd>Hoje o registro vive só no navegador de cada pessoa. Não sincroniza, não é compartilhado, e some se limparem os dados do site.</dd>
+    <dt>Custo real</dt><dd>Exige banco de dados e controle de acesso. Deixa de ser página estática e vira sistema para manter.</dd>
+    <dt>Como testar</dt><dd>Só depois da hipótese 2 provar que alguém registra resultado. Sem isso, você constrói um banco vazio.</dd>
+  </dl>
+</article>
+
+<section class="ordem">
+  <h2>Por onde eu começaria</h2>
+  <ol>
+    <li><b>Construir agora:</b> a 3, rotação que cobra. É barata, usa o que já existe, e ataca a dor mais acionável.</li>
+    <li><b>Testar sem construir:</b> a 1 e a 4. Faça à mão uma vez e veja se o ganho aparece. A 4 você consegue testar comigo hoje, numa conversa.</li>
+    <li><b>Validar com o time antes:</b> a 2, porque depende de alguém manter o registro, e a 5, que pode ser só troca de rótulo.</li>
+    <li><b>Deixar para depois:</b> a 8, que é a única que muda a natureza do projeto. Ela transforma uma página que não precisa de manutenção num sistema que precisa.</li>
+  </ol>
+</section>
+
+<section class="naofazer">
+  <h3>O que eu não faria</h3>
+  <ul>
+    <li><b>Gerar a peça pronta por IA dentro da ferramenta.</b> Já existe ferramenta de sobra para isso, e o valor daqui é o método, não a geração.</li>
+    <li><b>Puxar métrica da conta de anúncio automaticamente.</b> Vira produto de BI, área com concorrente grande e caro de manter.</li>
+    <li><b>Calendário editorial.</b> Você já tem ClickUp. Duplicar isso cria dois lugares para olhar.</li>
+    <li><b>Login e contas.</b> O que hoje funciona por link aberto passaria a ter barreira de entrada, e o time é pequeno.</li>
+  </ul>
+</section>
+
+<section class="fontes">
+  <h3>Fontes</h3>
+  <ul>
+    <li><a href="https://www.metricool.com/" target="_blank" rel="noopener">Metricool Social Media Well-being Report</a> — 927 profissionais, campo de 19 a 26 de janeiro de 2026, divulgado em 3 de março de 2026. Metodologia declarada; a nota de imprensa fala em "quase 1.000", divergindo do número do método.</li>
+    <li><a href="https://blog.hubspot.com/marketing/social-media-challenges" target="_blank" rel="noopener">HubSpot, desafios de social media</a> — mais de 1.100 profissionais. Sem data de campo nem metodologia.</li>
+    <li><a href="https://motionapp.com/events/2026-creative-strategy-bootcamp/homebase/2026-creative-benchmarks" target="_blank" rel="noopener">Motion, benchmarks de criativo 2026</a> — mais de 550 mil anúncios, mais de 6 mil anunciantes, cerca de US$ 1,3 bilhão, de setembro de 2025 a janeiro de 2026. Os cortes por faixa de investimento vieram de <a href="https://sepia-lab.com/en/blog/ad-creative-volume-benchmarks" target="_blank" rel="noopener">resumo de terceiro</a>, não verificado contra o relatório original.</li>
+    <li><a href="https://www.superside.com/blog/creative-memory-loss" target="_blank" rel="noopener">Superside, perda de memória criativa</a> — descrição qualitativa útil; os números são de pesquisa própria ou encomendada, de empresa que vende a solução.</li>
+    <li><a href="https://m-files.com/resources/en-hub/rt-main-blog-en/how-long-does-it-actually-take-to-find-a-document-dissecting-the-many-stats-out-there" target="_blank" rel="noopener">M-Files, sobre as estatísticas de tempo perdido procurando arquivo</a> — motivo pelo qual eu <b>não</b> usei esses números: as fontes variam de 1,8 a 8,8 horas por semana, com metodologias incomparáveis e várias sem relatório identificável.</li>
+  </ul>
+</section>
+
+</div>
+</body>
+</html>
